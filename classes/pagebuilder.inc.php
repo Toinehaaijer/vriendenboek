@@ -1,11 +1,5 @@
 <?php
 class pagebuilder {
-	protected $head;
-	protected $toplinks;
-	protected $header;
-	protected $content;
-	protected $footer;
-	protected $scripts;
 
 	public function __construct() {
 	}
@@ -13,6 +7,7 @@ class pagebuilder {
 	private function definePage() {
 		$url = $_SERVER['REQUEST_URI'];
 		$page = pathinfo( parse_url($url, PHP_URL_PATH), PATHINFO_FILENAME);
+		$page = str_replace(".inc", "", $page);
 		define('PAGE', $page);
 		return PAGE;
 	}
@@ -27,7 +22,10 @@ class pagebuilder {
 		include TOPLINKS;
 		include HEADER;
 		include NAV;
-		include DIR_CONTENT . definePage() . ".phtml";
+		$content = DIR_CONTENT . "/" .  $this->definePage() . ".inc.phtml";
+		if(file_exists($content)){
+			include $content;
+		}
 		include FOOTER;
 		include SCRIPTS;
 		$output = ob_get_clean();

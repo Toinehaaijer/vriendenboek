@@ -1,0 +1,34 @@
+RewriteEngine On
+RewriteBase /
+
+#skip existing files or directories
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
+#everything else goes to index.php
+RewriteRule ^ vriendenboek/index.php?request=%{THE_REQUEST} [L]
+
+
+#Folder restrictions
+<Files page/*>
+    deny from all
+</Files>
+
+<Files skin/bootstrap/*>
+    deny from all
+</Files>
+
+<Files skin/css/*>
+    deny from all
+</Files>
+
+<Files skin/js/*>
+    deny from all
+</Files>
+
+<Files config/*>
+    deny from all
+</Files>
+
+<Files classes/*>
+    deny from all
+</Files>
