@@ -1,5 +1,8 @@
-/* Define the main colors */
-.maincolor { background-color:#ECECEC; color:#FFF;}
+input[type="text"]{ color:#666666; }
+
+/* Define the main and accent colors */
+.main-color { background-color:#ECECEC; color:#FFF;}
+.accent-color-1 { background-color:#ECECEC; color:#FFF;}
 
 /* Grid */
 .container-fluid { margin-right: auto; margin-left: auto; padding-left: 15px; padding-right: 15px; }
@@ -11,7 +14,16 @@
 .no-mgbottom {margin-bottom: 0;}
 .no-mgleft {margin-left: 0;}
 
+.rel {position:relative;}
+
+/* Form Controls */
+
+
 /* Top Links */
 .top-link-container {min-height:50px;}
 .top-links {padding:3px;}
+.top-links .material-icons {position:relative; top:5px;}
+
+/* Search Bar */
+.search-icon {position:absolute; right:10px; top: 10px;}
 
