@@ -1,2 +1,17 @@
 /* Define the main colors */
-.maincolor { background-color:#00b051; color:#FFF;}
+.maincolor { background-color:#ECECEC; color:#FFF;}
+
+/* Grid */
+.container-fluid { margin-right: auto; margin-left: auto; padding-left: 15px; padding-right: 15px; }
+
+/* Positioning Rules */
+.no-mg {margin:0;}
+.no-mgtop {margin-top: 0;}
+.no-mgright {margin-right: 0;}
+.no-mgbottom {margin-bottom: 0;}
+.no-mgleft {margin-left: 0;}
+
+/* Top Links */
+.top-link-container {min-height:50px;}
+.top-links {padding:3px;}
+
